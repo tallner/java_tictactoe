@@ -1,6 +1,7 @@
 package tictactoe;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TicTacToe {
 
@@ -82,6 +83,15 @@ public class TicTacToe {
         String gameEngineResult = "";
         
         String[][] board = { { "____", "____" , "____"}, { "____", "____" , "____"}, { "____", "____" , "____"} };
+        
+        // random start player
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 101);
+        if (randomNum < 50)
+        	playerName = "Player1";
+        else if (mode==2)
+        	playerName = "Player2";
+        else if (mode == 1)
+        	playerName = "CPU";
 		
 		while(true)
         {
