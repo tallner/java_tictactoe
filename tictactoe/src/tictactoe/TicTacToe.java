@@ -269,10 +269,7 @@ public class TicTacToe {
 
 	public static String checkVertical(String[][] board, String sign, int mode) {
 		
-		//possible wins
-		//[0][0]+[0][1]+[0][2]
-		//[1][0]+[1][1]+[1][2]
-		//[2][0]+[2][1]+[2][2]
+		
 		
 		if (
 				(board[0][0].equals(sign) && board[0][1].equals(sign) && board[0][2].equals(sign)) ||
@@ -281,21 +278,14 @@ public class TicTacToe {
 			) 
 		{
 			return signCheck(sign, mode);
-			/*
-			 * System.out.println("Winner is " + signCheck(sign, mode)); try {
-			 * Thread.sleep(1000); } catch (InterruptedException e) { // TODO Auto-generated
-			 * catch block e.printStackTrace(); } UI_Menu();
-			 */
+			
 		}
 		return "";
 			
 				
 	}
 	public static String checkHorizontal(String[][] board, String sign, int mode) {
-		//possible wins
-		//[0][0]+[1][0]+[2][0]
-		//[0][1]+[1][1]+[2][1]
-		//[0][2]+[1][2]+[2][2]
+		
 		
 		if (
 				(board[0][0].equals(sign) && board[1][0].equals(sign) && board[2][0].equals(sign)) ||
@@ -304,18 +294,12 @@ public class TicTacToe {
 			)
 		{
 			return signCheck(sign, mode);
-			/*
-			 * System.out.println("Winner is " + signCheck(sign, mode)); try {
-			 * Thread.sleep(1000); } catch (InterruptedException e) { // TODO Auto-generated
-			 * catch block e.printStackTrace(); } UI_Menu();
-			 */
+			
 		}
 		return "";
 	}
 	public static String checkDiagonal(String[][] board, String sign, int mode) {
-		//possible wins
-		//[0][0]+[1][1]+[2][2]
-		//[2][0]+[1][1]+[0][2]
+		
 		
 		if (
 				(board[0][0].equals(sign) && board[1][1].equals(sign) && board[2][2].equals(sign)) ||
@@ -323,11 +307,7 @@ public class TicTacToe {
 			)
 		{
 			return signCheck(sign, mode);
-			/*
-			 * System.out.println("Winner is " + signCheck(sign, mode)); try {
-			 * Thread.sleep(1000); } catch (InterruptedException e) { // TODO Auto-generated
-			 * catch block e.printStackTrace(); } UI_Menu();
-			 */
+			
 		}
 		return "";
 	
@@ -340,7 +320,7 @@ public class TicTacToe {
 				}	
 			}
 		}
-		//System.out.println("No winner");
+	
 		return "Draw";
 	}
 	public static String signCheck(String playerSign, int mode) {
